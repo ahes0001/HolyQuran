@@ -1,0 +1,129 @@
+
+@font-face {
+  font-family: Majeed;
+  src: url("Al\ Majeed\ Quranic\ Font_shiped.ttf") format("opentype");
+}
+@font-face {
+  font-family: Mushaf;
+  src: url("Al\ Mushaf\ Quran.ttf") format("opentype");
+}
+@font-face {
+  font-family: Qalam;
+  src: url("Al\ Qalam\ Quran.ttf") format("opentype");
+}
+@font-face {
+  font-family: Deco;
+  src: url("Deco\ Type.ttf") format("opentype");
+}
+@font-face {
+  font-family: Hafs;
+  src: url("Hafs.ttf") format("opentype");
+}
+@font-face {
+  font-family: Me;
+  src: url("Me\ Quran.ttf") format("opentype");
+}
+@font-face {
+  font-family: Nabi;
+  src: url("Nabi.ttf") format("opentype");
+}
+@font-face {
+  font-family: Neirizi;
+  src: url("Neirizi.ttf") format("opentype");
+}
+
+#quran {
+  font-size: 2.2em;
+  text-align: justify;
+  font-family: Hafs;
+  color: #17274a;
+  font-weight: 400;
+  line-height: 1.65em;
+  margin: 0 10% 1em;
+
+}
+h2{
+    font-size:1em;
+    text-align:center;
+    margin: 0;
+    background-color: rgb(155, 156, 156);
+    padding-top: 0.5%;
+    padding-bottom: 0.25%;
+    font-weight: bold;
+    
+}
+
+b{
+  font-weight: 500;
+    color: #ff3335;
+}
+.quran label{
+  color: #0da755;
+  font-family: 'Changa', sans-serif;
+  display: inline-block;
+  text-align: justify;
+}
+
+#navbarTogglerDemo02{
+  margin-right:2.5%;
+}
+.navbar-brand{
+  margin-left: 2.5%;
+}
+table{
+  display: inline;
+  
+}
+#surahTable{
+  text-align: center;
+  margin: 2.5% 0;
+}
+
+.selectable:hover{
+  background-color: #656565;
+}
+
+.nav-item {
+  padding: 0 0.5rem;
+}
+
+.select-wrapper {
+  position: relative;
+  border: 0;
+  padding: 0 1rem 0 0;
+  display: inline-block;
+  overflow: hidden;
+  background: #212529;
+}
+
+.select-wrapper::after {
+  content: "\25BC";
+  position: absolute;
+  top: 50%;
+  top: 0;
+  right: 1rem;
+  padding: 0 1rem;
+  cursor: pointer;
+  pointer-events: none;
+  transition: .25s all ease;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.5em;
+  transform: translateY(120%);
+}
+
+.select-wrapper select {
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background: none;
+  background-image: none;
+  width: 100%;
+  height: 100%;
+  color: rgba(255, 255, 255, 0.55);
+  cursor: pointer;
+}
+
+.offcanvas-item{
+  margin: 3% 0;
+}

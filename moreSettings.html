@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Holy Quran | القران الكريم</title>
+    <!-- Bootstrp scripts -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Website script -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="index.html">Holy Quran | القران الكريم</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarTogglerDemo02"
+        aria-controls="navbarTogglerDemo02"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Index</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Font Size
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><label for="customRange2" class="form-label">Size: <span id="rangeValue">-11</span></label>
+                <input type="range" class="form-range" min="-25" max="100" id="customRange2" value="-11"></li>
+            </ul>
+          </li>
+          <li class="nav-item select-wrapper" ">
+            <select id="fontSelect" class="form-select bg-dark border-dark" aria-label="Default select example" >
+                <option value="Hafs">Select Font</option>
+                <option value="Majeed">Majeed</option>
+                <option value="Mushaf">Mushaf</option>
+                <option value="Qalam">Qalam</option>
+                <option value="Deco">Deco</option>
+                <option value="Hafs">Hafs</option>
+                <option value="Me">Me</option>
+                <option value="Nabi">Nabi</option>
+                <option value="Neirizi">Neirizi</option>
+              </select>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"href="moreSettings.html">More Settings</a>
+
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasScrollingLabel">More Settings(Not Functinonal Yet)</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+
+        <div class="form-check form-switch offcanvas-item">
+          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+          <label class="form-check-label" for="flexSwitchCheckChecked">Enable DarkMode</label>
+        </div>
+
+        <div class="form-check form-switch offcanvas-item">
+          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+          <label class="form-check-label" for="flexSwitchCheckChecked">Enable Arabic Numbers</label>
+        </div >
+
+        <div class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3 offcanvas-item">
+          <label for="customRange3" class="form-label ">Font spacing: 50</label>
+          <input type="range" class="form-range" min="0" max="100" id="customRange2">
+        </div>
+        <div class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3 offcanvas-item">
+          <label for="customRange3" class="form-label ">Margin: 50</label>
+          <input type="range" class="form-range" min="0" max="100" id="customRange2">
+        </div>
+
+        <div class="offcanvas-item">
+          <label for="basic-url" class="form-label">Select color for numbers:</label>
+          <select class="form-select p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3" aria-label="Default select example">
+            <option selected>Green</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+
+        <div class="d-grid gap-2 offcanvas-item">
+          <button class="btn btn-secondary " type="button">Resore to Default Settings</button>
+        </div>
+
+      </div>
+    </div>
+
+    <section id="postContent">
+      
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

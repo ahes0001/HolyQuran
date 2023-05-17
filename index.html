@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title >Holy Quran | القران الكريم</title>
+    <!-- Bootstrp scripts -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Website script -->
+    <link rel="stylesheet" href="css/styles.css" />
+    
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="index.html">Holy Quran | القران الكريم</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarTogglerDemo02"
+        aria-controls="navbarTogglerDemo02"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Index</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Font Size
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><label for="customRange2" class="form-label">Size: <span id="rangeValue">-11</span></label>
+                <input type="range" class="form-range" min="-25" max="100" id="customRange2" value="-11"></li>
+            </ul>
+          </li>
+          <li class="nav-item select-wrapper" ">
+            <select id="fontSelect" class="form-select bg-dark border-dark" aria-label="Default select example" >
+                <option value="Hafs">Select Font</option>
+                <option value="Majeed">Majeed</option>
+                <option value="Mushaf">Mushaf</option>
+                <option value="Qalam">Qalam</option>
+                <option value="Deco">Deco</option>
+                <option value="Hafs">Hafs</option>
+                <option value="Me">Me</option>
+                <option value="Nabi">Nabi</option>
+                <option value="Neirizi">Neirizi</option>
+              </select>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"href="moreSettings.html">More Settings</a>
+
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasScrollingLabel">More Settings(Not Functinonal Yet)</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+
+        <div class="form-check form-switch offcanvas-item">
+          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+          <label class="form-check-label" for="flexSwitchCheckChecked">Enable DarkMode</label>
+        </div>
+
+        <div class="form-check form-switch offcanvas-item">
+          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+          <label class="form-check-label" for="flexSwitchCheckChecked">Enable Arabic Numbers</label>
+        </div >
+
+        <div class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3 offcanvas-item">
+          <label for="customRange3" class="form-label ">Font spacing: 50</label>
+          <input type="range" class="form-range" min="0" max="100" id="customRange2">
+        </div>
+        <div class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3 offcanvas-item">
+          <label for="customRange3" class="form-label ">Margin: 50</label>
+          <input type="range" class="form-range" min="0" max="100" id="customRange2">
+        </div>
+
+        <div class="offcanvas-item">
+          <label for="basic-url" class="form-label">Select color for numbers:</label>
+          <select class="form-select p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3" aria-label="Default select example">
+            <option selected>Green</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+
+        <div class="d-grid gap-2 offcanvas-item">
+          <button class="btn btn-secondary " type="button">Resore to Default Settings</button>
+        </div>
+
+      </div>
+    </div>
+
+    
+
+    <section id="postContent">
+      <div id="surahTable" class="quran">
+        <table class="table table-striped center table-bordered">
+          <thead class="table-dark">
+            <tr >
+              <th scope="col">Num of Ayah</th>
+              <th scope="col">Surah</th>
+              <th scope="col">#</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="selectable" onclick="window.location.href = 'surahAl-Fatiha.html';"">
+              <td>7</td>
+              <td>Al-Fatiha | الفاتحة</td>
+              <th scope="row">1</th>
+            </tr>
+            <tr class="selectable" onclick="window.location.href = 'surahAl-Baqarah.html';"">
+              <td>286</td>
+              <td>Al-Baqarah | البقرة</td>
+              <th scope="row">2</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>آل عمران</td>
+              <th scope="row">3</th>
+            </tr>
+            <tr class="selectable">
+              <td>176</td>
+              <td>النساء</td>
+              <th scope="row">4</th>
+            </tr>
+            <tr class="selectable">
+              <td>120</td>
+              <td>المائدة</td>
+              <th scope="row">5</th>
+            </tr>
+            <tr class="selectable">
+              <td>165</td>
+              <td>الأنعام</td>
+              <th scope="row">6</th>
+            </tr>
+            <tr class="selectable">
+              <td>206</td>
+              <td>	الأعراف</td>
+              <th scope="row">7</th>
+            </tr>
+            <tr class="selectable">
+              <td>75</td>
+              <td>الأنفال</td>
+              <th scope="row">8</th>
+            </tr>
+            <tr class="selectable">
+              <td>129</td>
+              <td>التوبة</td>
+              <th scope="row">9</th>
+            </tr>
+            <tr class="selectable">
+              <td>109</td>
+              <td>يونس</td>
+              <th scope="row">10</th>
+            </tr>
+            <tr class="selectable">
+              <td>123</td>
+              <td>هود</td>
+              <th scope="row">11</th>
+            </tr>
+            <tr class="selectable">
+              <td>111</td>
+              <td>يوسف</td>
+              <th scope="row">12</th>
+            </tr>
+            <tr class="selectable">
+              <td>43</td>
+              <td>الرعد</td>
+              <th scope="row">13</th>
+            </tr>
+            <tr class="selectable">
+              <td>52</td>
+              <td>ابراهيم</td>
+              <th scope="row">14</th>
+            </tr>
+            <tr class="selectable">
+              <td>99</td>
+              <td>الحجر</td>
+              <th scope="row">15</th>
+            </tr>
+            <tr class="selectable">
+              <td>128</td>
+              <td>النحل</td>
+              <th scope="row">16</th>
+            </tr>
+            <tr class="selectable">
+              <td>111</td>
+              <td>الإسراء</td>
+              <th scope="row">17</th>
+            </tr>
+            <tr class="selectable">
+              <td>110</td>
+              <td>الكهف</td>
+              <th scope="row">18</th>
+            </tr>
+            <tr class="selectable">
+              <td>98</td>
+              <td>مريم</td>
+              <th scope="row">19</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>طه</td>
+              <th scope="row">20</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>الأنبياء</td>
+              <th scope="row">21</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>الحج</td>
+              <th scope="row">22</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>	المؤمنون</td>
+              <th scope="row">23</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>	النور</td>
+              <th scope="row">24</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>الفرقان</td>
+              <th scope="row">25</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>	الشعراء</td>
+              <th scope="row">26</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>النمل</td>
+              <th scope="row">27</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>	القصص</td>
+              <th scope="row">28</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>العنكبوت</td>
+              <th scope="row">29</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>	الروم</td>
+              <th scope="row">30</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>	لقمان</td>
+              <th scope="row">31</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>	الأحزاب</td>
+              <th scope="row">32</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>الأحزاب</td>
+              <th scope="row">33</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>سبأ</td>
+              <th scope="row">34</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>	فاطر</td>
+              <th scope="row">35</th>
+            </tr>
+            <tr class="selectable" onclick="window.location.href = 'surahYaseen.html';"">
+              <td>	83</td>
+              <td>Yaseen | يس</td>
+              <th scope="row">36</th>
+            </tr>
+            <tr class="selectable">
+              <td>182</td>
+              <td>الصافات</td>
+              <th scope="row">37</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>سورة ص</td>
+              <th scope="row">38</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>	الزمر</td>
+              <th scope="row">39</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>	غافر</td>
+              <th scope="row">40</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>	فصلت</td>
+              <th scope="row">41</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>	الشورى</td>
+              <th scope="row">42</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>	الزخرف</td>
+              <th scope="row">43</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>	الدخان</td>
+              <th scope="row">44</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>الجاثية</td>
+              <th scope="row">45</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>الأحقاف</td>
+              <th scope="row">46</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>	محمد</td>
+              <th scope="row">47</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>	الفتح</td>
+              <th scope="row">48</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>الحجرات</td>
+              <th scope="row">49</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>سورة ق</td>
+              <th scope="row">50</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>الذاريات</td>
+              <th scope="row">51</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>الطور</td>
+              <th scope="row">52</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>النجم</td>
+              <th scope="row">53</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>القمر</td>
+              <th scope="row">54</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>الرحمن</td>
+              <th scope="row">55</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>الواقعة</td>
+              <th scope="row">56</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>الحديد</td>
+              <th scope="row">57</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>المجادلة</td>
+              <th scope="row">58</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>الحشر</td>
+              <th scope="row">59</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>	الممتحنة</td>
+              <th scope="row">60</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>الصف</td>
+              <th scope="row">61</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>	الجمعة</td>
+              <th scope="row">62</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>المنافقون</td>
+              <th scope="row">63</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>	التغابن</td>
+              <th scope="row">64</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>	الطلاق</td>
+              <th scope="row">65</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>التحريم</td>
+              <th scope="row">66</th>
+            </tr>
+            <tr class="selectable" onclick="window.location.href = 'surahAl-Mulk.html';"">
+              <td>30</td>
+              <td>الملك</td>
+              <th scope="row">67</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>القلم</td>
+              <th scope="row">68</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>	الحاقة</td>
+              <th scope="row">69</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>	المعارج</td>
+              <th scope="row">70</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>نوح</td>
+              <th scope="row">71</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>الجن</td>
+              <th scope="row">72</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>المزمل</td>
+              <th scope="row">73</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>المدثر</td>
+              <th scope="row">74</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>القيامة</td>
+              <th scope="row">75</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>الإنسان</td>
+              <th scope="row">76</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>المرسلات</td>
+              <th scope="row">77</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>النبأ</td>
+              <th scope="row">78</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>النازعات</td>
+              <th scope="row">79</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>عبس</td>
+              <th scope="row">80</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>التكوير</td>
+              <th scope="row">81</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>الإنفطار</td>
+              <th scope="row">82</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>المطففين</td>
+              <th scope="row">83</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>الانشقاق</td>
+              <th scope="row">84</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>البروج</td>
+              <th scope="row">85</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>الطارق</td>
+              <th scope="row">86</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>الأعلى</td>
+              <th scope="row">87</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>الغاشية</td>
+              <th scope="row">88</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>الفجر</td>
+              <th scope="row">89</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>البلد</td>
+              <th scope="row">90</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>الشمس</td>
+              <th scope="row">91</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>الليل</td>
+              <th scope="row">92</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>الضحى</td>
+              <th scope="row">93</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>الشرح</td>
+              <th scope="row">94</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>التين</td>
+              <th scope="row">95</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>العلق</td>
+              <th scope="row">96</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>القدر</td>
+              <th scope="row">97</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>	البينة</td>
+              <th scope="row">98</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>الزلزلة</td>
+              <th scope="row">99</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>العاديات</td>
+              <th scope="row">100</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>القارعة</td>
+              <th scope="row">101</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>التكاثر</td>
+              <th scope="row">102</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>العصر</td>
+              <th scope="row">103</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>الهمزة</td>
+              <th scope="row">104</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>الفيل</td>
+              <th scope="row">105</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>	قريش</td>
+              <th scope="row">106</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>الماعون</td>
+              <th scope="row">107</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>	الكوثر</td>
+              <th scope="row">108</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>الكافرون</td>
+              <th scope="row">109</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>النصر</td>
+              <th scope="row">110</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>المسد</td>
+              <th scope="row">111</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>الإخلاص</td>
+              <th scope="row">112</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>الفلق</td>
+              <th scope="row">113</th>
+            </tr>
+            <tr class="selectable">
+              <td>200</td>
+              <td>الناس</td>
+              <th scope="row">114</th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
